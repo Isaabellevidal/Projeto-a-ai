@@ -86,10 +86,9 @@ export default function Home() {
       
     },
     img: {
-      width: 415,
-      height:490,
-      resizeMode: 'contain', 
-      borderColor: 'red'
+      width: 400,
+      height:240,
+      marginBottom:50,
   
     },
     imgg: {
@@ -131,6 +130,7 @@ export default function Home() {
       textAlign: 'center',
       right:95,
       fontFamily:'Poppins_800ExtraBold',
+      marginBottom:150,
     },
   row:{
     display:"flex",

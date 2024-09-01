@@ -15,6 +15,8 @@ export default function Local(){
         <Image source={Icon} style={styles.img} />
 
         <Text  style={styles.titlee}>Venha conhecer nossa loja</Text>
+        
+        <Text  style={styles.titlee}>Venha conhecer nossa loja</Text>
 
       </View>
     );
@@ -40,10 +42,9 @@ export default function Local(){
     },
   img: {
 
-    width: 415,
-    height:490,
-    resizeMode: 'contain', 
-    borderColor: 'red'
+    width: 400,
+    height:200,
+    marginBottom:50,
   },
 
   });

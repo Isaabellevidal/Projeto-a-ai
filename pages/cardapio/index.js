@@ -32,13 +32,17 @@ export default function Cardapio() {
         <Text style={styles.subtitle}>VEJA AS OPÇÕES ABAIXO:</Text>
 
 
+
         <View style={styles.imgContainer}>
         <TouchableOpacity >
         <Image source={Icon7} style={styles.imgg} />
        </TouchableOpacity>
 
        <Text style={styles.subtitleimg}>AÇAI COM CONFETE:</Text>
-       <Text style={styles.paraph}>hh:</Text>
+       
+       <Text style={styles.paraph}>Um açaí cremoso, decorado com uma chuva de confetes
+        coloridos que adicionam um toque divertido e crocante à sobremesa.</Text>
+        
        </View>
 
        <View style={styles.imgContainer}>
@@ -48,16 +52,7 @@ export default function Cardapio() {
 
        <Text style={styles.subtitleimg}>VEJA AS OPÇÕES ABAIXO:</Text>
        </View>
-
-
-       <View style={styles.imgContainer}>
-        <TouchableOpacity >
-        <Image source={Icon5} style={styles.imgg} />
-       </TouchableOpacity>
-
-       <Text style={styles.subtitleimg}>VEJA AS OPÇÕES ABAIXO:</Text>
-       </View>
-
+       
 
 
 
@@ -103,28 +98,31 @@ export default function Cardapio() {
       fontFamily:'Poppins_800ExtraBold',
     },
     subtitleimg:{
+      flexDirection: 'row', 
+      alignItems: 'center',
       fontSize: 15,
       color: '#65146d',
-      textAlign: 'left',
-    marginBottom:50,
+      marginBottom:50,
       fontFamily:'Poppins_800ExtraBold',
     },
 
     imgg: {
       top:20,
-      width: 130,
-      height:160,
+      width: 160,
+      height:170,
       resizeMode: 'contain', 
       marginHorizontal: 10, 
-      right:20,
       marginBottom:15,
+      
     },
   
     imgContainer: {
       flexDirection: 'row', 
-      alignItems: 'center',// Organiza os itens em linha horizontal
+      alignItems: 'center',
+    left:150,  // Organiza os itens em linha horizontal
     }, 
     paraph:{
+     right:150,
       fontSize: 10,
       color: '#65146d',
       textAlign: 'left',

@@ -10,8 +10,12 @@ import Local from '../../pages/local';
 
 
 const HIcon = require('../../assets/img/home.png');
+const HIcon2 = require('../../assets/img/home1.png');
 const CIcon = require('../../assets/img/cardapio-acai.png');
+const CIcon2 = require('../../assets/img/cardapio1-acai.png');
 const LIcon = require('../../assets/img/local-acai.png');
+const LIcon2 = require('../../assets/img/local1-acai.png');
+
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +44,7 @@ export default function TabBar() {
                         if (focused) { // se ele estiver focado
                             return (
                                 <View style={styles.box}>
-                                    <Image source={HIcon} style={styles.icon} />
+                                    <Image source={HIcon2} style={styles.icon} />
                                     <Text>Home</Text>
                                 </View>
                             );
@@ -49,6 +53,7 @@ export default function TabBar() {
                         return (
                             <View style={styles.box}>
                                 <Image source={HIcon} style={styles.icon} />
+                                <Text>Home</Text>
                             </View>
                         )
 
@@ -63,7 +68,7 @@ export default function TabBar() {
                         if (focused) {
                             return (
                                 <View style={styles.box}>
-                                    <Image source={CIcon} style={styles.icon} />
+                                    <Image source={CIcon2} style={styles.icon} />
                                     <Text>Cardapio</Text>
                                 </View>
                             );
@@ -71,7 +76,7 @@ export default function TabBar() {
                         return (
                             <View style={styles.box}>
                                 <Image source={CIcon} style={styles.icon} />
-
+                                <Text>Cardapio</Text>
                             </View>
                         );
                         }
@@ -84,7 +89,7 @@ export default function TabBar() {
                                 if(focused){
                                     return (
                                         <View style={styles.box}>
-                                            <Image source={LIcon} style={styles.icon} />
+                                            <Image source={LIcon2} style={styles.icon} />
                                             <Text>Local</Text>
                                         </View>
                                     )
@@ -92,6 +97,7 @@ export default function TabBar() {
                                 return(
                                     <View style={styles.box}>
                                         <Image source={LIcon} style={styles.icon} />
+                                        <Text>Local</Text>
                                     </View>
                                 );
                             }
