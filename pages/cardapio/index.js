@@ -22,8 +22,7 @@ export default function Cardapio() {
 
   return (
 
-
-      // <ScrollView>
+      <ScrollView>
         <View style={styles.container}>
 
         <Text style={styles.title}>ESCOLHA JÁ O </Text>
@@ -32,39 +31,132 @@ export default function Cardapio() {
         <Text style={styles.subtitle}>VEJA AS OPÇÕES ABAIXO:</Text>
 
 
-
+    <View style={styles.card}>  
         <View style={styles.imgContainer}>
+
         <TouchableOpacity >
         <Image source={Icon7} style={styles.imgg} />
        </TouchableOpacity>
 
+      <View style={styles.textContainer}> 
        <Text style={styles.subtitleimg}>AÇAI COM CONFETE:</Text>
-       
-       <Text style={styles.paraph}>Um açaí cremoso, decorado com uma chuva de confetes
-        coloridos que adicionam um toque divertido e crocante à sobremesa.</Text>
-        
+       <Text style={styles.text}>Um açaí cremoso, decorado com uma chuva de confete coloridos que adiciona um toque divertido
+         e crocante </Text>
+      
        </View>
+     </View> 
 
-       <View style={styles.imgContainer}>
+ </View>
+
+
+    <View style={styles.card}>  
+        <View style={styles.imgContainer}>
+
         <TouchableOpacity >
         <Image source={Icon6} style={styles.imgg} />
        </TouchableOpacity>
 
-       <Text style={styles.subtitleimg}>VEJA AS OPÇÕES ABAIXO:</Text>
+      <View style={styles.textContainer}> 
+       <Text style={styles.subtitleimg}>AÇAI PURO:</Text>
+       <Text style={styles.text}>O açaí puro é um fruto amazônico de cor roxa escura, com sabor terroso e levemente adocicado. Sua polpa é rica em antioxidantes, fibras e gorduras saudáveis, sendo consumida geralmente congelada ou em pó.</Text>
        </View>
+
+     </View> 
+
+  </View>
+
+
+  
+  <View style={styles.card}>  
+        <View style={styles.imgContainer}>
+
+        <TouchableOpacity >
+        <Image source={Icon5} style={styles.imgg} />
+       </TouchableOpacity>
+
+      <View style={styles.textContainer}> 
+       <Text style={styles.subtitleimg}>AÇAI COM FRUTAS:</Text>
+       <Text style={styles.text}>O açaí de frutas no copo é uma bebida refrescante e nutritiva, feita com polpa de açaí misturada a outras frutas. Servido gelado, oferece um sabor tropical e é rico em vitaminas, antioxidantes e fibras.</Text>
+       </View>
+
+     </View> 
+
+  </View>
+
+
+  <Text style={styles.subtitle}>OPÇÕES DE AÇAI NA TIGELA:</Text>
+
+  <View style={styles.card}>  
+        <View style={styles.imgContainer}>
+
+        <TouchableOpacity >
+        <Image source={Icon2} style={styles.imgg} />
+       </TouchableOpacity>
+
+      <View style={styles.textContainer}> 
+       <Text style={styles.subtitleimg}>AÇAI COM FRUTAS:</Text>
+       <Text style={styles.text}>O açaí de frutas no copo é uma bebida refrescante e nutritiva, feita com polpa de açaí misturada a outras frutas. Servido gelado, oferece um sabor tropical e é rico em vitaminas, antioxidantes e fibras.</Text>
+       </View>
+
+     </View> 
+
+  </View>
+
+
+  
+  <View style={styles.card}>  
+        <View style={styles.imgContainer}>
+
+        <TouchableOpacity >
+        <Image source={Icon3} style={styles.imgg} />
+       </TouchableOpacity>
+
+      <View style={styles.textContainer}> 
+       <Text style={styles.subtitleimg}>AÇAI COM FRUTAS:</Text>
+       <Text style={styles.text}>O açaí de frutas no copo é uma bebida refrescante e nutritiva, feita com polpa de açaí misturada a outras frutas. Servido gelado, oferece um sabor tropical e é rico em vitaminas, antioxidantes e fibras.</Text>
+       </View>
+
+     </View> 
+
+  </View>
+
+    
+  <View style={styles.card}>  
+        <View style={styles.imgContainer}>
+
+        <TouchableOpacity >
+        <Image source={Icon4} style={styles.imgg} />
+       </TouchableOpacity>
+
+      <View style={styles.textContainer}> 
+       <Text style={styles.subtitleimg}>AÇAI COM FRUTAS:</Text>
+       <Text style={styles.text}>O açaí de frutas no copo é uma bebida refrescante e nutritiva, feita com polpa de açaí misturada a outras frutas. Servido gelado, oferece um sabor tropical e é rico em vitaminas, antioxidantes e fibras.</Text>
+       </View>
+
+     </View> 
+
+  </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        
-
-
-
-
-
-
-
 
 
         </View>
 
-        // </ScrollView>
+        </ScrollView>
 
  
     );
@@ -79,22 +171,24 @@ export default function Cardapio() {
       justifyContent: 'center',
     },
     title:{
+      top:90,
       fontSize: 28,
       color: '#65146d',
       right:80,
       fontFamily:'Poppins_800ExtraBold',
     },
     titlee:{
+      top:90,
       fontSize: 28,
       color: '#9fcd2c',
       right:120,
       fontFamily:'Poppins_800ExtraBold',
     },
     subtitle:{
+      top:105,
       fontSize: 15,
       color: '#65146d',
       textAlign: 'center',
-      right:85,
       fontFamily:'Poppins_800ExtraBold',
     },
     subtitleimg:{
@@ -102,7 +196,6 @@ export default function Cardapio() {
       alignItems: 'center',
       fontSize: 15,
       color: '#65146d',
-      marginBottom:50,
       fontFamily:'Poppins_800ExtraBold',
     },
 
@@ -119,17 +212,35 @@ export default function Cardapio() {
     imgContainer: {
       flexDirection: 'row', 
       alignItems: 'center',
-    left:150,  // Organiza os itens em linha horizontal
+      right:110,
     }, 
-    paraph:{
-     right:150,
+
+    text:{
       fontSize: 10,
       color: '#65146d',
-      textAlign: 'left',
-      marginBottom:10,
       fontFamily:'Poppins_400Regular',
+      padding:10, // Organiza os itens
+      textAlign:'justify',
+    },
 
+    textContainer:{
+      flexDirection: 'column',
 
     },
+
+
+    card:{
+
+      top:100,
+    width:200,
+    height:220,
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    padding:20,
+
+
+    }
 
   });

@@ -66,7 +66,9 @@ export default function Home() {
    </View>
   
 
-
+   <View style={styles.card} >
+    <Text style={styles.title}>Cardápio</Text>
+    </View>
 
 
    </View>
@@ -102,7 +104,7 @@ export default function Home() {
       height:160,
       resizeMode: 'contain', 
       marginHorizontal: 10, 
-      marginBottom:200,
+  
     },
     imgContainer: {
       flexDirection: 'row', 
@@ -135,5 +137,21 @@ export default function Home() {
   row:{
     display:"flex",
     flexDirection:"column",
-}  ,
+} ,
+
+card:{
+width:380,
+height:150,
+backgroundColor: '#fff',
+shadowColor: '#000',
+shadowOffset: { width: 4, height: 4 },
+shadowOpacity: 0.8,
+padding:20,
+borderRadius:10,
+marginTop:40,
+elevation:10,
+marginBottom:200,
+
+
+},
   });
