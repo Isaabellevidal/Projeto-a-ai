@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image} from 'react-native';
 import {  useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
+import * as Animatable from 'react-native-animatable';
 
 const Icon = require('../../assets/img/acai-inicial.png');
 const Icon2 = require('../../assets/img/tigela-1-verd.png');
@@ -31,7 +32,7 @@ export default function Cardapio() {
         <Text style={styles.subtitle}>VEJA AS OPÇÕES ABAIXO:</Text>
 
 
-    <View style={styles.card}>  
+    <Animatable.View animation={'slideInRight'} delay={400} style={styles.card}>  
         <View style={styles.imgContainer}>
 
         <TouchableOpacity >
@@ -46,10 +47,10 @@ export default function Cardapio() {
        </View>
      </View> 
 
- </View>
+ </Animatable.View>
 
 
-    <View style={styles.card}>  
+    <Animatable.View  animation={'slideInLeft'} delay={400}  style={styles.card}>  
         <View style={styles.imgContainer}>
 
         <TouchableOpacity >
@@ -63,11 +64,11 @@ export default function Cardapio() {
 
      </View> 
 
-  </View>
+  </Animatable.View>
 
 
   
-  <View style={styles.card}>  
+  <Animatable.View animation={'slideInRight'} delay={400}  style={styles.card}>  
         <View style={styles.imgContainer}>
 
         <TouchableOpacity >
@@ -81,12 +82,12 @@ export default function Cardapio() {
 
      </View> 
 
-  </View>
+  </Animatable.View>
 
 
   <Text style={styles.subtitle}>OPÇÕES DE AÇAI NA TIGELA:</Text>
 
-  <View style={styles.card}>  
+  <Animatable.View animation={'slideInLeft'} delay={400}  style={styles.card}>  
         <View style={styles.imgContainer}>
 
         <TouchableOpacity >
@@ -100,11 +101,11 @@ export default function Cardapio() {
 
      </View> 
 
-  </View>
+  </Animatable.View>
 
 
   
-  <View style={styles.card}>  
+  < Animatable.View animation={'slideInRight'} delay={400}  style={styles.card}>  
         <View style={styles.imgContainer}>
 
         <TouchableOpacity >
@@ -117,11 +118,12 @@ export default function Cardapio() {
        </View>
 
      </View> 
+     </Animatable.View>
 
-  </View>
+
 
     
-  <View style={styles.card}>  
+  <Animatable.View  animation={'slideInLeft'} delay={400}   style={styles.cardd}>  
         <View style={styles.imgContainer}>
 
         <TouchableOpacity >
@@ -135,24 +137,7 @@ export default function Cardapio() {
 
      </View> 
 
-  </View>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-
+  </Animatable.View>
 
         </View>
 
@@ -165,10 +150,11 @@ export default function Cardapio() {
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      display: 'flex',
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+   
     },
     title:{
       top:90,
@@ -230,8 +216,7 @@ export default function Cardapio() {
 
 
     card:{
-
-      top:100,
+    top:100,
     width:200,
     height:220,
     backgroundColor: '#fff',
@@ -240,6 +225,20 @@ export default function Cardapio() {
     shadowOpacity: 0.8,
     padding:20,
 
+
+    },
+
+    
+    cardd:{
+    top:100,
+    width:200,
+    height:220,
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    padding:20,
+    marginBottom:200,
 
     }
 

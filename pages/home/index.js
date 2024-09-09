@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
 import {  useFonts, Poppins_800ExtraBold } from '@expo-google-fonts/poppins';
-
+import * as Animatable from 'react-native-animatable';
 
 
 const Icon = require('../../assets/img/acai-inicial.png');
@@ -25,18 +25,21 @@ export default function Home() {
   return (
 
     <ScrollView>
+
     <View style={styles.container}>
     {/* <View style={styles.row}> */}
-    <Text style={styles.title} >JÁ TOMOU O </Text>
-    <Text style={styles.title}>       SEU AÇAI HOJE?</Text>
-    <Text style={styles.subtitle}>EXPERIMENTE AGORA</Text>
+    <Animatable.Text animation={'zoomInUp'} style={styles.title} >JÁ TOMOU O </Animatable.Text>
+    <Animatable.Text animation={'zoomInUp'}  style={styles.title}>       SEU AÇAI HOJE?</Animatable.Text>
+    <Animatable.Text  animation={'pulse'}  style={styles.subtitle}>EXPERIMENTE AGORA</Animatable.Text>
 
-   <Image source={Icon} style={styles.img} />
+   <Animatable.Image  animation={'fadeInLeft'} delay={300}
+    source={Icon} style={styles.img} />
 
    <Text style={styles.text}>São várias opções de açai </Text>
    <Text style={styles.text}>para você escolher</Text>
 
-    <View style={styles.imgContainer}>
+    <Animatable.View animation={'pulse'}style={styles.imgContainer}>
+
     <TouchableOpacity >
    <Image source={Icon2} style={styles.imgg} />
    </TouchableOpacity>
@@ -48,10 +51,10 @@ export default function Home() {
    <TouchableOpacity >
    <Image source={Icon4} style={styles.imgg} />
    </TouchableOpacity>
-   </View>
+   </Animatable.View>
  
 
-    <View style={styles.imgContainer}>
+    <Animatable.View animation={'pulse'} easing="ease-out" iterationCount="infinite" style={styles.imgContainer}>
     <TouchableOpacity >
    <Image source={Icon5} style={styles.imag} />
    </TouchableOpacity >
@@ -63,11 +66,18 @@ export default function Home() {
    <TouchableOpacity >
    <Image source={Icon7} style={styles.imag} />
    </TouchableOpacity >
-   </View>
+   </Animatable.View>
   
 
    <View style={styles.card} >
-    <Text style={styles.title}>Cardápio</Text>
+    <Text style={styles.title1}>Os mais pedidos</Text>
+
+
+
+
+
+
+
     </View>
 
 
@@ -118,6 +128,13 @@ export default function Home() {
       fontFamily:'Poppins_800ExtraBold',
      
     },
+
+    title1:{
+      fontSize: 23,
+      color: '#65146d',
+      fontFamily:'Poppins_800ExtraBold',
+     
+    },
     text:{
       fontSize: 24,
       color: '#65146d',
@@ -137,21 +154,24 @@ export default function Home() {
   row:{
     display:"flex",
     flexDirection:"column",
-} ,
+   } ,
 
-card:{
-width:380,
-height:150,
-backgroundColor: '#fff',
-shadowColor: '#000',
-shadowOffset: { width: 4, height: 4 },
-shadowOpacity: 0.8,
-padding:20,
-borderRadius:10,
-marginTop:40,
-elevation:10,
-marginBottom:200,
+    card:{
+    width:380,
+    height:280,
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: { width: 4, height: 4 },
+    shadowOpacity: 0.8,
+    padding:20,
+    borderRadius:10,
+    marginTop:40,
+    elevation:10,
+    marginBottom:200,
+    },
 
 
-},
+
+
+
   });

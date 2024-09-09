@@ -24,11 +24,8 @@ export default function Local(){
         <Text  style={styles.text}>Venha conhecer nossa loja de açaí! Estamos na Rua das Palmeiras, nº 123, de segunda a sábado, das 10h às 20h. Oferecemos açaí puro e misturado com outras frutas em um ambiente acolhedor. Esperamos você! </Text>
 
 
-         
-        <Text  style={styles.titlee}>Sobre a empresa</Text>
-
         
-    
+        <Text  style={styles.title2}>Sobre a empresa</Text>
 
         <View style={styles.imgContainer}>
 
@@ -37,23 +34,13 @@ export default function Local(){
        </TouchableOpacity>
 
       <View style={styles.textContainer}> 
-       <Text style={styles.text}>O açaí de frutas no copo é uma bebida refrescante e nutritiva, feita com polpa de açaí misturada a outras frutas. Servido gelado, oferece um sabor tropical e é rico em vitaminas, antioxidantes e fibras.</Text>
+       <Text style={styles.text1}>
+A Bendito Açaí é dedicada a oferecer açaí de alta qualidade, com um compromisso com a excelência proporcionamos uma experiência deliciosa e saudável em cada visita.</Text>
        </View>
 
 
 
   </View>
-
-
-
-
-
-
-
-
-
-
-
 
       </View>
 
@@ -68,15 +55,23 @@ export default function Local(){
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+
     },
     title:{
-      top:40,
+      top:60,
       fontSize: 28,
       color: '#65146d',
       right:80,
       fontFamily:'Poppins_800ExtraBold',
     },
     titlee:{
+      top:60,
+      fontSize: 25,
+      color: '#9fcd2c',
+      fontFamily:'Poppins_800ExtraBold',
+    },
+
+    title2:{
       top:60,
       fontSize: 25,
       color: '#9fcd2c',
@@ -89,11 +84,20 @@ export default function Local(){
     marginBottom:50,
   },
   text:{
-    top:60,
+    top:45,
     fontSize: 15,
     color: '#65146d',
     fontFamily:'Poppins_400Regular',
-    padding:10, // Organiza os itens
+    padding:30, // Organiza os itens
+    textAlign:'center',
+  },
+
+  text1:{
+    top:100,
+    fontSize: 15,
+    color: '#65146d',
+    fontFamily:'Poppins_400Regular',
+    padding:5, // Organiza os itens
     textAlign:'center',
   },
   
@@ -114,6 +118,7 @@ card:{
   },
 
   imgg: {
+    top:90,
     width: 110,
     height:100,
     margin:40,
@@ -130,6 +135,7 @@ card:{
   
   textContainer:{
     flexDirection: 'column',
+    marginRight:200,
 
   },
 
