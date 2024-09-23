@@ -11,7 +11,7 @@ const Icon4 = require('../../assets/img/tigela-2-verde.png');
 const Icon5 = require('../../assets/img/copo-2-roxo.png');
 const Icon6 = require('../../assets/img/copo-3-verde.png');
 const Icon7 = require('../../assets/img/copo-6-roxo.png');
-const teste = require('../../assets/img/teste.png');
+const teste = require('../../assets/img/testee.webp');
 
 export default function Home() {
   let [fontsLoaded] = useFonts({
@@ -35,7 +35,7 @@ export default function Home() {
    <Animatable.Image  animation={'fadeInLeft'} delay={300}
     source={Icon} style={styles.img} />
 
-   <Text style={styles.text}>São várias opções de açai </Text>
+   {/* <Text style={styles.text}>São várias opções de açai </Text>
    <Text style={styles.text}>para você escolher</Text>
 
     <Animatable.View animation={'pulse'}style={styles.imgContainer}>
@@ -67,17 +67,41 @@ export default function Home() {
    <Image source={Icon7} style={styles.imag} />
    </TouchableOpacity >
    </Animatable.View>
-  
-
+   */}
+{/* 
    <View style={styles.card} >
     <Text style={styles.title1}>Os mais pedidos</Text>
 
     <Image source={teste} style={styles.imag} />
    
 
+    </View> */}
 
+<Text style={styles.title1}>Em alta no Bendito Açaí</Text>
+<View style={styles.imgContainer} >
+   
+    <TouchableOpacity >
+   <Image source={teste} style={styles.img1} />
+    </TouchableOpacity>
+
+    <TouchableOpacity >
+   <Image source={teste} style={styles.img2} />
+    </TouchableOpacity>
 
     </View>
+
+    <View style={styles.imgContainer} >
+   
+    <TouchableOpacity >
+   <Image source={teste} style={styles.img3} />
+    </TouchableOpacity>
+
+    <TouchableOpacity >
+   <Image source={teste} style={styles.img4} />
+    </TouchableOpacity>
+
+    </View>
+
 
 
    </View>
@@ -102,6 +126,46 @@ export default function Home() {
       marginBottom:50,
   
     },
+    img1: {
+      top:20,
+      width: 180,
+      height:250,
+      marginBottom:40,
+      borderRadius:10,
+      marginHorizontal:10,
+      right:10,
+
+    },
+
+    img2: {
+     
+      width: 180,
+      height:210,
+      marginBottom:40,
+      borderRadius:10,
+  
+
+    },
+
+    img3: {
+      width: 180,
+      height:210,
+      marginBottom:200,
+      borderRadius:10,
+      marginHorizontal:10,
+      right:10,
+
+    },
+
+    img4: {
+      width: 180,
+      height:250,
+      marginBottom:200,
+      borderRadius:10,
+  
+
+    },
+
     imgg: {
       width: 120,
       height:160,
@@ -168,7 +232,7 @@ export default function Home() {
     borderRadius:10,
     marginTop:40,
     elevation:10,
-    marginBottom:200,
+    marginBottom:20,
     },
 
 
