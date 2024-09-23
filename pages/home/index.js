@@ -11,7 +11,7 @@ const Icon4 = require('../../assets/img/tigela-2-verde.png');
 const Icon5 = require('../../assets/img/copo-2-roxo.png');
 const Icon6 = require('../../assets/img/copo-3-verde.png');
 const Icon7 = require('../../assets/img/copo-6-roxo.png');
-
+const teste = require('../../assets/img/teste.png');
 
 export default function Home() {
   let [fontsLoaded] = useFonts({
@@ -54,7 +54,7 @@ export default function Home() {
    </Animatable.View>
  
 
-    <Animatable.View animation={'pulse'} easing="ease-out" iterationCount="infinite" style={styles.imgContainer}>
+    <Animatable.View animation={'pulse'} easing="ease-out" iterationCount={3} style={styles.imgContainer}>
     <TouchableOpacity >
    <Image source={Icon5} style={styles.imag} />
    </TouchableOpacity >
@@ -72,9 +72,8 @@ export default function Home() {
    <View style={styles.card} >
     <Text style={styles.title1}>Os mais pedidos</Text>
 
-
-
-
+    <Image source={teste} style={styles.imag} />
+   
 
 
 
@@ -142,6 +141,8 @@ export default function Home() {
    
      
     },
+
+  
     subtitle:{
       top: 100, 
       fontSize: 15,
@@ -169,9 +170,6 @@ export default function Home() {
     elevation:10,
     marginBottom:200,
     },
-
-
-
 
 
   });
