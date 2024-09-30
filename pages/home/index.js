@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
+import React, { useState} from 'react';
+import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, TextInput  } from 'react-native';
 import {  useFonts, Poppins_800ExtraBold } from '@expo-google-fonts/poppins';
 import * as Animatable from 'react-native-animatable';
+import{FontAwesome} from 'react-native-vector-icons';
 
 
 const Icon = require('../../assets/img/aacai-inicial.png');
@@ -15,8 +17,10 @@ const foto1 = require('../../assets/img/foto1.png');
 const foto2 = require('../../assets/img/foto2.jpeg');
 const foto3 = require('../../assets/img/foto3.png');
 const foto4 = require('../../assets/img/foto4.png');
+const Logo = require('../../assets/img/logo.png');
 
 export default function Home() {
+  const [searchText, setSearchText] = useState('');
   let [fontsLoaded] = useFonts({
     Poppins_800ExtraBold,
   });
@@ -27,6 +31,7 @@ export default function Home() {
 
   return (
 
+
     <ScrollView>
 
     <View style={styles.container}>
@@ -34,12 +39,44 @@ export default function Home() {
     <Animatable.Text animation={'zoomInUp'} style={styles.title} >JÁ TOMOU O </Animatable.Text>
     <Animatable.Text animation={'zoomInUp'}  style={styles.title}>       SEU AÇAI HOJE?</Animatable.Text>
     <Animatable.Text  animation={'pulse'}  style={styles.subtitle}>EXPERIMENTE AGORA</Animatable.Text>
+    {/* <Animatable.Image  animation={'fadeInLeft'} delay={300}
+    source={Logo} style={styles.imgLogo} /> */}
 
-   <Animatable.Image  animation={'fadeInLeft'} delay={300}
-    source={Icon} style={styles.img} />
+    <View> 
+   <FontAwesome name="search" size={24} color="#65146d" left={340} />
+   <TextInput style={styles.input}
+    placeholder="Buscar..."
+    value={searchText}
+    onChangeText={(text) => setSearchText(text)}
+   />
+   </View>
+
+
+   <View style={styles.imgContainer} >
+   <TouchableOpacity >
+   <Image source={Icon2} style={styles.imgg} />
+   </TouchableOpacity>
+
+   <TouchableOpacity >
+   <Image source={Icon7} style={styles.imgg} />
+   </TouchableOpacity>
+
+   <TouchableOpacity >
+   <Image source={Icon4} style={styles.imgg} />
+   </TouchableOpacity>
+
+   <TouchableOpacity >
+   <Image source={Icon6} style={styles.imgg} />
+   </TouchableOpacity >
 
   
 
+   </View>
+
+   {/* <Animatable.Image  animation={'fadeInLeft'} delay={300}
+    source={Icon} style={styles.img} /> */}
+
+ 
 <Text style={styles.title1}>Em alta no Bendito Açaí</Text>
 <View style={styles.imgContainer} >
    
@@ -54,7 +91,6 @@ export default function Home() {
     </View>
 
     <View style={styles.imgContainer} >
-   
     <TouchableOpacity >
    <Image source={foto3} style={styles.img3} />
     </TouchableOpacity>
@@ -62,10 +98,11 @@ export default function Home() {
     <TouchableOpacity >
    <Image source={foto4} style={styles.img4} />
     </TouchableOpacity>
-
     </View>
 
- <Text style={styles.textt}>São várias opções de açai </Text>
+    
+
+ {/* <Text style={styles.textt}>São várias opções de açai </Text>
    <Text style={styles.textt}>para você escolher</Text>
 
    <View style={styles.card} >
@@ -100,23 +137,13 @@ export default function Home() {
    </Animatable.View>
    
    </View>
-
-  
-{/* 
-   <View style={styles.card} >
-    <Text style={styles.title1}>Os mais pedidos</Text>
-
-    <Image source={teste} style={styles.imag} />
-   
-
-    </View> */}
-
+ */}
 
 
 
    </View>
    <StatusBar style="auto" />
- {/* </View> */}
+
  </ScrollView>
   );
 }
@@ -130,14 +157,32 @@ export default function Home() {
       justifyContent: 'center',
       
     },
+    input:{
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    fontSize:16,
+    color: '#333',
+    bottom:35,
+    width: 380,
+
+    },
     img: {
       width: 400,
-      height:240,
+      height:250,
+      marginBottom:50,
+  
+    },
+    imgLogo: {
+      width: 60,
+      height:50,
       marginBottom:50,
   
     },
     img1: {
-      top:20,
+      top:60,
       width: 180,
       height:270,
       marginBottom:40,
@@ -148,7 +193,7 @@ export default function Home() {
     },
 
     img2: {
-     
+      top:30,
       width: 180,
       height:220,
       marginBottom:40,
@@ -159,26 +204,29 @@ export default function Home() {
     img3: {
       width: 180,
       height:220,
-      marginBottom:40,
+      marginBottom:160,
       borderRadius:10,
       marginHorizontal:10,
       right:10,
+  
 
     },
 
     img4: {
       width: 180,
       height:270,
-      marginBottom:40,
       borderRadius:10,
+      top:5,
+      marginBottom:200,
 
     },
 
     imgg: {
-      width: 100,
-      height:100,
+      width: 80,
+      height:80,
       resizeMode: 'contain', 
       marginHorizontal: 10, 
+      bottom:15,
     },
     imag: {
       top:15,
@@ -202,6 +250,7 @@ export default function Home() {
     },
 
     title1:{
+      top:24,
       fontSize: 23,
       color: '#65146d',
       fontFamily:'Poppins_800ExtraBold',
