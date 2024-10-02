@@ -10,6 +10,7 @@ const Icon4 = require('../../assets/img/tigela-2-verde.png');
 const Icon5 = require('../../assets/img/copo-2-roxo.png');
 const Icon6 = require('../../assets/img/copo-3-verde.png');
 const Icon7 = require('../../assets/img/copo-6-roxo.png');
+const Logo = require('../../assets/img/logo.png');
 
 
 export default function Cardapio() {
@@ -165,6 +166,7 @@ export default function Cardapio() {
       color: '#65146d',
       right: 80,
       fontFamily: 'Poppins_800ExtraBold',
+      marginBottom: -15, 
     },
     titlee: {
       top: 90,
@@ -226,7 +228,9 @@ export default function Cardapio() {
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.8,
       padding: 20,
+      elevation: 10,
       marginBottom: 200,
+      borderRadius: 10,
     },
   });
   
