@@ -29,6 +29,7 @@ export default function Cardapio() {
 
         <Text style={styles.title}>ESCOLHA JÁ O </Text>
         <Text style={styles.titlee}>SEU AÇAI</Text>
+        <Image source={Logo} style={styles.logo} />
 
         <Text style={styles.subtitle}>VEJA AS OPÇÕES ABAIXO:</Text>
 
@@ -160,6 +161,12 @@ export default function Cardapio() {
       alignItems: 'center',
       justifyContent: 'center',
     },
+    logo: {
+      width: 80,
+      height: 80,
+      resizeMode: 'contain',
+      marginLeft:250,
+    },
     title: {
       top: 90,
       fontSize: 28,
@@ -176,7 +183,7 @@ export default function Cardapio() {
       fontFamily: 'Poppins_800ExtraBold',
     },
     subtitle: {
-      top: 105,
+      top: 40,
       fontSize: 15,
       color: '#65146d',
       textAlign: 'center',
@@ -209,7 +216,7 @@ export default function Cardapio() {
       flexDirection: 'column',
     },
     card: {
-      top: 100,
+      top: 30,
       width: 380,
       backgroundColor: '#fff',
       shadowColor: '#000',
@@ -221,7 +228,7 @@ export default function Cardapio() {
       borderRadius: 10,
     },
     cardd: {
-      top: 100,
+      top: 30,
       width: 380,
       backgroundColor: '#fff',
       shadowColor: '#000',

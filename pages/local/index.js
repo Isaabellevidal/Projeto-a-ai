@@ -3,13 +3,23 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'rea
 
 const Icon = require('../../assets/img/local-img.png');
 const Icon4 = require('../../assets/img/logo.png');
+const Logo = require('../../assets/img/logo.png');
+const foto1 = require('../../assets/img/casal.jpeg');
+const foto2 = require('../../assets/img/familia.jpeg');
+const foto3 = require('../../assets/img/idosos.jpeg');
 
 export default function Local() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.title}>Já conhece </Text>
-        <Text style={styles.title}>   a nossa loja?</Text>
+
+        <View style={styles.header}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>Já conhece</Text>
+            <Text style={styles.title}>a nossa loja?</Text>
+          </View>
+          <Image source={Logo} style={styles.logo} />
+        </View>
 
         <Image source={Icon} style={styles.img} />
 
@@ -21,17 +31,29 @@ export default function Local() {
 
         <Text style={styles.title2}>Sobre a empresa</Text>
 
-        <View style={styles.imgContainer}>
-          <TouchableOpacity>
-            <Image source={Icon4} style={styles.imgg} />
-          </TouchableOpacity>
+        <View style={styles.card}>
+          <View style={styles.imgContainer}>
+            <TouchableOpacity>
+              <Image source={Icon4} style={styles.imgg} />
+            </TouchableOpacity>
 
-          <View style={styles.textContainer}>
-            <Text style={styles.text1}>
-              A Bendito Açaí é dedicada a oferecer açaí de alta qualidade, com um compromisso com a excelência proporcionamos uma experiência deliciosa e saudável em cada visita.
-            </Text>
+            <View style={styles.textContainer}>
+              <Text style={styles.text1}>
+                A Bendito Açaí é dedicada a oferecer açaí de alta qualidade, com um compromisso com a excelência proporcionamos uma experiência deliciosa e saudável em cada visita.
+              </Text>
+            </View>
           </View>
         </View>
+
+        <Text style={styles.title3}>Ambiente familiar e amigável</Text>
+
+        {/* View para as três fotos lado a lado */}
+        <View style={styles.photosContainer}>
+          <Image source={foto1} style={styles.photo} />
+          <Image source={foto2} style={styles.photo} />
+          <Image source={foto3} style={styles.photo} />
+        </View>
+
       </View>
     </ScrollView>
   );
@@ -44,35 +66,57 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 20,
+    marginTop: 100,
+  },
+  titleContainer: {
+    flexDirection: 'column',
+  },
   title: {
-    top:95,
-    textAlign:"left",
-    marginRight:180,
     fontSize: 28,
     color: '#65146d',
     fontFamily: 'Poppins_800ExtraBold',
-    marginBottom: -20, // Ajuste para aproximar os títulos
+    lineHeight: 30,
+   
+  },
+  title3: {
+    fontSize: 28,
+    color: '#65146d',
+    fontFamily: 'Poppins_800ExtraBold',
+    lineHeight: 40,
+     textAlign:"center"
+  },
+  logo: {
+    width: 80,
+    height: 80,
+    bottom: 20,
+    resizeMode: 'contain',
   },
   titlee: {
-    top: 100,
+    top: 20,
     fontSize: 25,
     color: '#65146d',
     fontFamily: 'Poppins_800ExtraBold',
   },
   title2: {
-    top: 60,
+    top: 30,
     fontSize: 25,
     color: '#65146d',
     fontFamily: 'Poppins_800ExtraBold',
   },
   img: {
-    top: 120,
+    top: 20,
     width: 400,
     height: 200,
     marginBottom: 50,
   },
   text: {
-    top: 70,
+    top: 5,
     fontSize: 15,
     color: '#65146d',
     fontFamily: 'Poppins_400Regular',
@@ -80,42 +124,47 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   text1: {
-    top: 100,
     fontSize: 15,
     color: '#65146d',
     fontFamily: 'Poppins_400Regular',
-    padding: 5,
+    padding: 10,
     textAlign: 'center',
   },
   card: {
-    top: 90,
+    top: 40,
     width: 380,
-    height: 150,
     backgroundColor: '#fff',
     shadowColor: '#000',
-    shadowOffset: { width: 4, height: 4 },
+    shadowOffset: { width: 9, height: 5 },
     shadowOpacity: 0.8,
     padding: 20,
     borderRadius: 10,
-    marginTop: 40,
-    elevation: 10,
-    marginBottom: 200,
+    elevation: 15,
+    marginBottom: 100,
   },
   imgg: {
-    top: 90,
-    width: 110,
-    height: 100,
-    margin: 40,
-    marginBottom: 50,
+    width: 120,
+    height: 110,
+    marginRight: 20,
   },
   imgContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    left: 90,
-    marginBottom: 200,
   },
   textContainer: {
-    flexDirection: 'column',
-    marginRight: 200,
+    flex: 1,
+  },
+  photosContainer: {
+    flexDirection: 'row', // Exibe as fotos lado a lado
+    justifyContent: 'space-between', // Distribui o espaço entre elas
+    marginTop: 20,
+    paddingHorizontal: 10,
+  },
+  photo: {
+    width: 120,
+    height: 200,
+    marginHorizontal: 5,
+    borderRadius: 10,
+    marginBottom:100
   },
 });
